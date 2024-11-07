@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Budget Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Travel Budget Calculator</h1>
+        <p>Estimate your travel expenses from one city to another</p>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <form id="budgetForm">
+                <div class="form-group">
+                    <label for="originCity">From (City):</label>
+                    <select id="originCity" required>
+                        <option value="New York City">New York City, USA</option>
+                        <option value="Los Angeles">Los Angeles, USA</option>
+                        <option value="Toronto">Toronto, Canada</option>
+                        <option value="London">London, UK</option>
+                        <option value="Paris">Paris, France</option>
+                        <option value="Berlin">Berlin, Germany</option>
+                        <option value="Tokyo">Tokyo, Japan</option>
+                        <option value="Sydney">Sydney, Australia</option>
+                        <option value="Cape Town">Cape Town, South Africa</option>
+                        <option value="Rio de Janeiro">Rio de Janeiro, Brazil</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="destinationCity">To (City):</label>
+                    <select id="destinationCity" required>
+                        <option value="New York City">New York City, USA</option>
+                        <option value="Los Angeles">Los Angeles, USA</option>
+                        <option value="Toronto">Toronto, Canada</option>
+                        <option value="London">London, UK</option>
+                        <option value="Paris">Paris, France</option>
+                        <option value="Berlin">Berlin, Germany</option>
+                        <option value="Tokyo">Tokyo, Japan</option>
+                        <option value="Sydney">Sydney, Australia</option>
+                        <option value="Cape Town">Cape Town, South Africa</option>
+                        <option value="Rio de Janeiro">Rio de Janeiro, Brazil</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="travelMode">Mode of Transportation:</label>
+                    <select id="travelMode">
+                        <option value="car">Car (0.5 $/mile)</option>
+                        <option value="train">Train (0.2 $/mile)</option>
+                        <option value="flight">Flight (0.1 $/mile)</option>
+                    </select>
+                </div>
+				
+				<h3>Estimated Expenses</h3>
+				<div id="distanceResult">
+				<p>Distance: <span id="distance">0</span> miles</p>
+				<p>Travel Cost: $<span id="travelCost">0</span</p>
+				</div>
+				<b>
+
+                <div class="form-group">
+                    <label for="accommodation">Accommodation Cost (in USD):</label>
+                    <input type="number" id="accommodation" placeholder="Cost of accommodation" min="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="food">Food Cost (in USD):</label>
+                    <input type="number" id="food" placeholder="Cost of food" min="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="activities">Activities Cost (in USD):</label>
+                    <input type="number" id="activities" placeholder="Cost of activities" min="0">
+                </div>
+
+                <button type="button" onclick="calculateTotalBudget()">Calculate Total Budget</button>
+            </form>
+        </div>
+
+        <div id="result" class="result-container">
+            <h2>Total Estimated Budget</h2>
+            <p id="totalBudget">₹0</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
